@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  app:
+    container_name: libra_sys_app
+    image: libra_sys
+    command: /opt/app/docker/start-webapp.sh
+    ports:
+      - "8000:80"
+    volumes:
+      - ./src/docker/php/app-dev.ini:/etc/php/8.2/mods-available/app.ini:ro
+      - ./src:/opt/app
+
+  db:
+    container_name: libra_sys_db
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: libra_sys
+      TZ: "Asia/Tokyo"
+    volumes:
+      - ./database/docker/db/data:/var/lib/mysql
+    ports:
+      - "3306:3306"
