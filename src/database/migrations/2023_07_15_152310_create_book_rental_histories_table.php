@@ -14,7 +14,7 @@ return new class extends Migration
             $table->unsignedBigInteger('book_id');
             $table->string('reason');
             $table->timestamp('rental_date');
-            $table->timestamp('return_date');
+            $table->timestamp('return_date')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

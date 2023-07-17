@@ -11,7 +11,7 @@ class BookController extends Controller
         BookQueryService $bookQueryService,
     ): JsonResponse
     {
-        $books = $bookQueryService->fetchWithRentalHistories(1);
+        $books = $bookQueryService->fetchWithRentalHistories(2);
         return \response()->json($books);
     }
 }
