@@ -2,7 +2,7 @@
 
 namespace LibraSys\Application\Service;
 
-use LibraSys\Domain\Book\Entity\Book;
+use LibraSys\Domain\Book;
 use LibraSys\Infrastructure\Repository\BookRepository;
 
 class BookAddService

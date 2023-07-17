@@ -26,7 +26,6 @@ class BookController extends Controller
     ): JsonResponse
     {
         $validated = $request->validated();
-        \Log::debug($validated);
         $service->add($validated['title'], $validated['description']);
 
         return \response()->json();

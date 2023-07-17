@@ -1,6 +1,6 @@
 <?php
 
-namespace LibraSys\Domain\Book\Entity;
+namespace LibraSys\Domain;
 
 class Book
 {

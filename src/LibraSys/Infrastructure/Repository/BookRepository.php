@@ -8,7 +8,7 @@ use LibraSys\Infrastructure\EloquentModel;
 
 class BookRepository
 {
-    public function store(Domain\Book\Entity\Book $book): void
+    public function store(Domain\Book $book): void
     {
         EloquentModel\Book::create([
             'title' => $book->title,
