@@ -24,7 +24,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|Book whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Book  extends \Eloquent
+class Book extends BaseModel
 {
     public function rentalHistories(): HasMany
     {
