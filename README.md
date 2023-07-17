@@ -15,7 +15,7 @@
 Dockerセットアップ + Laravel セットアップ
 
 ```bash
-make setup
+make docker/setup
 ```
 
 ## 動作確認

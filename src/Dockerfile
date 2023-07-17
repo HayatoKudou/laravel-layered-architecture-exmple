@@ -41,6 +41,5 @@ ENV PATH $PATH:/opt/composer/vendor/bin
 # App
 COPY .. /opt/app/
 WORKDIR /opt/app
-RUN composer install --optimize-autoloader --no-dev --no-scripts \
-    && chmod 777 ./bootstrap/cache \
+RUN chmod 777 ./bootstrap/cache \
     && find storage -type d | xargs chmod 777
